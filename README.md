@@ -1,5 +1,3 @@
-#Thymeleaf - Thymeleaf / Spring
+# Spring Boot application in Docker Container
 
-Source code in this repo is to support my on line course for Thymeleaf and the Spring Framework. 
-
-You can learn more about my course [here](http://courses.springframework.guru/courses/thymeleaf).
+Another (perhaps more advanced) example of a Spring Boot application in a more complex Docker container built.
