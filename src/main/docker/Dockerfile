@@ -13,3 +13,13 @@ RUN yum -y install /tmp/jdk-8-8-linux-x64.rpm
 RUN alternatives --install /usr/bin/java jar /usr/java/latest/bin/java 200000
 RUN alternatives --install /usr/bin/javaws javaws /usr/java/latest/bin/javaws 200000
 RUN alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
+
+EXPOSE 8080
+
+# Install Spring Boot artifact
+VOLUME /tmp
+ADD sfg-thymeleaf-course-0.0.1-SNAPSHOT.jar app.jar
+RUN sh -c 'touch /app.jar'
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ 
+
